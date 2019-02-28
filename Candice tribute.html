@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fontlibrary.org/face/hk-grotesk" rel="stylesheet" type="text/css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Candice Swanepoel Tribute</title>
+		<style>
+
+			@font-face {
+	    		font-family: 'gilroyextrabold';
+	    		src: url('https://static.tumblr.com/jbrmk8x/o3kpcbc8a/gilroy-extrabold-webfont.woff') format('woff');
+	    		font-weight: 100;
+	    		font-style: none;
+	    	}
+
+			html{
+			  	background-color: #eee;
+			  	font-family: 'HankenGroteskRegular', sans-serif;
+			  	font-weight: 100;
+			  	height: 100%;
+			  	color: #ddd;
+			  	font-size: 11pt;
+			}
+
+			body{
+				margin: 0;
+			}
+
+			img{
+				margin-top: 83.31px;
+				max-width: inherit;
+			  	display: block;
+			  	height: auto;
+			  	max-height: 100vh;
+			}
+
+			header{
+				overflow: hidden;
+				position: fixed;
+			  	background: #000b24;
+			  	padding-bottom: 20px;
+			  	padding-top: 10px;
+			  	padding-right: 2vw;
+			  	padding-left: 2vw;
+			  	grid-area: header;
+			  	top: 0;
+			  	left: 0;
+			  	right: 0;
+			}
+
+			footer{
+			  clear: both;
+			  text-align: center;
+			  grid-area: footer;
+			  background-color: #ddd;
+			  color: #aaa;
+			}
+
+			h1{
+				font-family: 'gilroyextrabold', sans-serif;
+				font-size: 30pt;
+				text-align: center;
+				margin: 5pt 0 5pt 0;
+				line-height: 90%;
+			}
+
+			h2{
+			  font-size: 16pt;
+			  background-color: #ddd;
+			  padding-top: 5pt;
+			  padding-bottom: 5pt;
+			  text-align: center;
+			  color: #2f3b41;
+			}
+
+			h3{
+			  margin-top: 7vh;
+			  margin-bottom: 7vh;
+			  text-align: center;
+			  font-weight: 300;
+			  font-style: italic;
+			  font-size: 11pt;
+			  line-height: 100%;
+			  color: #375360;
+			  font-weight: 900;
+			  padding: 6pt;
+			}
+
+			ul{
+			  text-align: justify;
+			  color: #555;
+			  padding-left: 18pt;
+			  padding-right: 6pt;
+			}
+
+			li{
+			  line-height: normal;
+			  margin-top: 12pt;
+			}
+
+			a{
+			  color: inherit;
+			}
+
+			strong{
+				color: #3b93be;
+			}
+
+			a:hover{
+			  animation-name: text-color;
+			  animation-duration: 500ms;
+			  animation-fill-mode: forwards;
+			}
+
+			li:hover{
+				animation-name: item-color;
+				animation-duration: 500ms;
+				animation-fill-mode: forwards;
+			}
+
+			@keyframes text-color{
+			  100%{
+				 color: #ff5de2;
+			  }
+			}
+
+			@keyframes item-color{
+				100%{
+					background-color: #e4d63a;
+				}
+			}
+
+			main, p{
+			  text-align: center;
+			  padding: 0;
+			  margin: 0;
+			}
+
+			#main{
+			  display: grid;
+			  grid-template-columns: auto;
+			  grid-template-rows: auto auto auto auto;
+			  grid-template-areas:
+				 "header"
+				 "image"
+				 "content"
+				 "footer";
+			}
+
+			#description{
+			  font-size: 11pt;
+			  font-style: italic;
+			  line-height: 100%;
+			  color: #afafaf;
+			}
+
+			#img-caption{
+			  font-style: italic;
+			  margin-top: 3px;
+			  font-size: 9pt;
+			  color: #aaa;
+			  line-height: 100%;
+			  text-align: right;
+			  padding-right: 6pt;
+			}
+
+			#img-div{
+			  grid-area: image;
+			  max-width: 100vw;
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+
+			#tribute-info{
+			  padding-top: 20px;
+			  grid-area: content;
+			  margin-left: 20vw;
+			  margin-right: 20vw;
+			}
+
+			/* For mobile devices */
+			@media only screen and (max-width: 600px) {
+				header{
+					overflow: initial;
+					position: static;
+				}
+
+				li{
+					line-height: 120%;
+				}
+
+				img{
+					margin-top: 0;
+				}
+
+				#tribute-info{
+					margin: 6pt;
+				}
+
+				li:hover{
+					animation: none;
+				}
+
+				ul{
+					text-align: left;
+				}
+
+			} 
+
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<header>
+				<h1 id="title">Candice Susan Swanepoel</h1>
+				<main id="description">
+					 <p>International supermodel from South Africa</p>
+				</main>
+			</header>
+  
+  <div id="img-div">
+	 <img id="image" src="https://static1.squarespace.com/static/53e03110e4b0f6e571d5509f/591364d015cf7deaeb71a955/591364df2e69cfef80770dbe/1494443263333/Shot_06_Upside_Candi%23142EB0.png?format=2500w" alt="" title="Candice Swanepoel for The Upside Sport campaign, 2014"/>
+	 <p id="img-caption">Candice for The Upside Sport, 2014<br/>(image courtesy of Kirsty Meares Productions)</p>
+  </div>
+  
+  <article id="tribute-info">
+	 <h2>her path to the present...</h2>
+	 <ul>
+		<li><strong>1988 - </strong>Born on October 20th in Pietermaritzburg, South Africa, to parents of French and Dutch descent. She spent most of her childhood on a dairy and cattle farm in Mooi River, a town about an hour away. She has an older brother, Stephen.</li>
+		<li><strong>2004 - </strong>Approached by a modelling scout in Durban, South Africa, where she was spotted in a flea market. She was 15 years old. Two weeks after an appointment with a local modelling agency, she was offered more than 40 castings abroad. It would be her first time overseas.</li>
+		<li><strong>2005 - </strong>Withdrew from her all-girls boarding school to pursue an international career in modelling.</li>
+		<li><strong>2006 - </strong>Travelled and lived around Europe for modelling jobs. She had just gotten out of a relationship in South Africa that hadn't been working out, when she met her now-fiancé Hermann Nicoli, a model from Brazil. They first met at a party in Milan, and then at a hotel lobby in Paris. A few months into dating, they both flew to South Africa to meet Candice's parents. A trip to Brazil, to meet Hermann's parents, soon followed.</li>
+		<li><strong>2007 - </strong>Moved to New York City on her own, and walked in her very first <em>Victoria's Secret Fashion Show</em>. The brand originally contracted her as a fitting model, but they liked her so much that they invited her to walk in their annual fashion show. She signed with <em>Victoria's Secret</em> and began modelling for the brand.</li>
+		<li><strong>2008 - </strong>While she was living away from home, political and safety issues in South Africa forced her parents to sell her childhood farm. Candice now visits them in Cape Town, where they work as tour guides.</li>
+		<li><strong>2010 - </strong>Became a <em>Victoria's Secret</em> Angel. Her increasing success was complemented with appearances in various high-profile magazine editorials, runway shows, and ad campaigns. She adopted a Jack Russell Terrier puppy named Luna.</li>
+		<li><strong>2011 - </strong>Opened the annual <em>Victoria's Secret Fashion Show</em>.</li>
+		<li><strong>2012 - </strong>Kept one of the puppies that her Jack Russell Terrier, Luna, gave birth to. The new pup was named Milo and lives with Candice, alongside Luna.</li>
+		<li><strong>2013 - </strong>Chosen to wear the "Royal Fantasy Bra", valued at $10 million with its precious gems, and opened the annual <em>Victoria's Secret Fashion Show</em> in the ensemble. Shot for the accessory brand <em>Bottletop</em>, which makes handbags from recycled bottle tops in Africa, to fund grassroots education programs across Africa.</li>
+		<li><strong>2014 - </strong>Closed the annual <em>Victoria's Secret Fashion Show</em> held in London, United Kingdom. She was voted to 1st place on <em>Maxim</em>'s "Hot 100 List", leading to prominent media events and campaigns with <em>Maxim</em>.</li>
+		<li><strong>2015 - </strong>Announced engagement to longtime boyfriend Hermann. Launched her denim line in collaboration with <em>Mother Denim</em>, in support of <em>mothers2mothers</em>, an African-based charity dedicated to preventing HIV transmissions between mothers and children in Africa.</li>
+		<li><strong>2016 - </strong>Gave birth to her first child on October 5th in Brazil. The boy was named Anacã (Anacan).</li>
+		<li><strong>2017 - </strong>Opened the annual <em>Victoria's Secret Fashion Show</em> held in Shanghai, China. Launched her designer sandal collection in collaboration with <em>Mara & Mine</em>, once more in support of <em>mothers2mothers</em>.</li>
+		<li><strong>2018 (present year) - </strong>Gave birth to her second child on June 19th. The boy, named Ariel, was also born in Brazil. Launched her own designer swimwear label called <em>Tropic of C</em>, with consciousness for the environment, through sustainably sourced fabrics and recycled packaging. She currently resides in Brazil with her fiancé, two boys, and two dogs.</li>
+	 </ul>
+	 
+	 <h3>Discover more of Candice's versatile work on <a id="tribute-link" href="https://www.candiceswanepoel.com" target="_blank">her website</a>.</h3>
+  </article>
+  
+  <footer>
+	 &copy; 2018 Lisa. All rights reserved.
+  </footer>
+</div>
+		</div>
+	</body>
+</html>
