@@ -1,0 +1,390 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <title>Sustainable apparel survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+/* Import Google fonts: */
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+html{
+  font-family: 'Raleway', sans-serif;
+  min-height: 100%; /* allows gradient background to fit full height of page */
+  font-size: 12pt;
+  background: linear-gradient(180deg, #dce0eb, #a7b6d5);
+}
+
+body{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+footer{
+  grid-area: footer;
+  text-align: center;
+  margin-top: 10vh;
+  color: #5676a1;
+}
+
+header{
+  grid-area: header;
+  text-align: center;
+}
+
+h1{
+  grid-area: header;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  color: #022b36;
+  font-size: 40pt;
+  text-shadow: 2px 0px 0px #6295aa, 0px 10px 70pt rgba(145,167,204,1);
+  margin: 0;
+  padding-top: 50pt;
+  padding-bottom: 15pt;
+  line-height: 90%;
+}
+
+main{
+  color: #998aab;
+  background-color: #022b36;
+  justify-self: center;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "description"
+    "survey-form";
+  justify-items: center;
+  border-radius: 12pt;
+  box-shadow: 0px 10px 50pt rgba(145,167,204,1);
+  width: 60vw;
+}
+
+form{
+  grid-area: survey-form;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas:
+    "survey-block1"
+    "survey-block2"
+    "survey-block3"
+    "survey-block4"
+    "survey-block5"
+    "survey-block6"
+    "survey-block7"
+    "survey-block8"
+    "submit";
+  justify-items: center;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #a6aa62;
+  line-height: 175%;
+}
+
+button{
+  margin: 20pt auto 30pt auto;
+  border-radius: 10pt;
+  background-color: #6295aa;
+  border-style: none;
+  padding: 5pt 10pt 5pt 10pt;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  display: block;
+}
+
+button:hover{
+  background-color: #a6aa62;
+}
+
+input, select, textarea, button{
+  font-size: 12pt;
+}
+
+select{
+  height: 25pt;
+}
+
+/* --------Survey blocks-------- */
+#name-prompt{
+  grid-area: survey-block1;
+}
+
+#email-prompt{
+  grid-area: survey-block2;
+}
+
+#age-prompt{
+  grid-area: survey-block3;
+}
+
+#role-prompt{
+  grid-area: survey-block4;
+}
+
+#frequency-prompt{
+  grid-area: survey-block5;
+}
+
+#dispose-prompt{
+  grid-area: survey-block6;
+}
+
+#locations-prompt{
+  grid-area: survey-block7;
+}
+
+#brands-prompt{
+  grid-area: survey-block8;
+}
+
+#submit-area{
+  grid-area: submit;
+  justify-self: center;
+  margin-top: 30pt;
+}
+/* --------End of survey blocks-------- */
+
+#description{
+  grid-area: description;
+  margin: 20pt 12pt 30pt 12pt;
+  color: #a7b6d5;
+  text-align: center;
+}
+
+#name-prompt .input, #email-prompt .input, #age-prompt .input, #role-prompt .input, textarea{
+  background-color: #cbd5d8;
+  color: #022b36;
+  font-family: 'Raleway', sans-serif;
+}
+
+#name-prompt .input, #email-prompt .input{
+  width: 75%;
+}
+
+#age-prompt .input{
+  width: 20%;
+}
+
+#role-prompt .input{
+  width: 50%;
+}
+
+.q-a{
+  margin: 12pt;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "prompt input";
+  width: 80%;
+}
+
+.prompt{
+  grid-area: prompt;
+  text-align: right;
+  padding-right: 11pt;
+}
+
+.input{
+  grid-area: input;
+  padding: 5pt;
+  font-size: 11pt;
+  border-radius: 5pt;
+  border-style: none;
+}
+
+.req{
+  color: #ca2535;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #869aa0;
+    opacity: 1; /* Firefox */
+}
+
+/* For tablet screen sizes */
+@media only screen and (max-width: 1024px){
+  main{
+    width: 85vw;
+  }
+}
+
+/* For smartphone screen sizes */
+@media only screen and (max-width: 600px){
+  main{
+    width: 95vw;
+  }
+  
+  textarea{
+    width: 90%;
+  }
+  
+  .q-a{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "prompt"
+      "input";
+    width: 90%;
+  }
+  
+  .prompt{
+    grid-area: prompt;
+    text-align: center;
+    margin-bottom: 5pt;
+  }
+  
+  .input{
+    grid-area: input;
+    font-size: 11pt;
+    border-radius: 5pt;
+    border-style: none;
+    justify-self: center;
+  }
+  
+  #description{
+    margin: 20pt 12pt 10pt 12pt;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Sustainable Apparel Survey</h1>
+  </header>
+
+  <main>
+    <p id="description">Let us know how we can improve sustainability in the apparel industry!</p>
+    <form id="survey-form" action="" method="post">
+      <div id="name-prompt" class="q-a">
+        <label id="name-label" for="name" class="prompt"><span class="req">*</span> Name</label>
+        <input id="name" name="name" class="input" placeholder="Enter your first and last name" type="text" required autofocus>
+      </div>
+      <div id="email-prompt" class="q-a">
+        <label id="email-label" for="email" class="prompt"><span class="req">*</span> Email</label>
+        <input id="email" name="email" class="input" placeholder="Enter your email address" type="email" required>
+      </div>
+      <div id="age-prompt" class="q-a">
+        <label id="number-label" for="number" class="prompt"><span class="req">*</span> Age</label>
+        <input id="number" name="number" class="input" placeholder="Age" type="number" min="1" max="150" required>
+      </div>
+
+      <div id="role-prompt" class="q-a">
+        <label id="role-dropdown" for="role" class="prompt"><span class="req">*</span> Which option best describes your current role?</label>
+        <select id="dropdown" class="input" name="role" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="student">Student</option>
+            <option value="job">Employed full-time</option>
+            <option value="no-answer">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+      </div>
+
+      <div id="frequency-prompt" class="q-a">
+        <label class="prompt"><span class="req">*</span> How frequently (approximate) do you purchase clothes for yourself?</label>
+        <ul class="input">
+          <li>
+            <input id="f1" type="radio" value="f1" name="frequency" required />
+            <label for="f1">daily</label>
+          </li>
+          <li>
+            <input id="f2" type="radio" value="f2" name="frequency" />
+            <label for="f2">weekly</label>
+          </li>
+          <li>
+            <input id="f3" type="radio" value="f3" name="frequency" />
+            <label for="f3">monthly</label>
+          </li>
+          <li>
+            <input id="f4" type="radio" value="f4" name="frequency" />
+            <label for="f4">yearly</label>
+          </li>
+          <li>
+            <input id="f5" type="radio" value="f5" name="frequency" />
+            <label for="f5">other</label>
+          </li>
+        </ul>
+      </div>
+
+      <div id="dispose-prompt" class="q-a">
+        <label class="prompt"><span class="req">*</span> How do you currently dispose of your old clothes?</label>
+        <ul class="input">
+          <li>
+            <input id="d1" type="checkbox" value="d1" name="dispose"/>
+            <label for="d1">throw away with garbage</label>
+          </li>
+          <li>
+            <input id="d2" type="checkbox" value="d2" name="dispose" />
+            <label for="d2">donate to charity/cause</label>
+          </li>
+          <li>
+            <input id="d3" type="checkbox" value="d3" name="dispose" />
+            <label for="d3">re-sell</label>
+          </li>
+          <li>
+            <input id="d4" type="checkbox" value="d4" name="dispose" />
+            <label for="d4">pass down to friends/family</label>
+          </li>
+          <li>
+            <input id="d5" type="checkbox" value="d5" name="dispose" />
+            <label for="d5">take to textile recycling facility</label>
+          </li>
+          <li>
+            <input id="d6" type="checkbox" value="d6" name="dispose" />
+            <label for="d6">keep in storage (do not dispose)</label>
+          </li>
+          <li>
+            <input id="d7" type="checkbox" value="d7" name="dispose" />
+            <label for="d7">other</label>
+          </li>
+        </ul>
+      </div>
+
+      <div id="locations-prompt" class="q-a">
+        <label class="prompt"><span class="req">*</span> Do you know places around you that accept used clothes for recycling?</label>
+        <ul class="input">
+          <li>
+            <input id="m1" type="radio" value="m1" name="material" required />
+            <label for="m1">yes</label>
+          </li>
+          <li>
+            <input id="m2" type="radio" value="m2" name="material" required />
+            <label for="m2">no</label>
+          </li>
+        </ul>
+      </div>
+
+      <div id="brands-prompt" class="q-a">
+        <label for="user-comment" class="prompt"><span class="req">*</span> List the names of environmentally sustainable brands you're aware of:</label>
+        <textarea id="user-comment" class="input" name="user-comment" rows="4" cols="50" placeholder="Enter the brands here, separated by commas [, ]" required></textarea>
+      </div>
+
+      <div id="submit-area">
+        <p id="thanks">Thank you for your input!</p>
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2018 Lisa. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
