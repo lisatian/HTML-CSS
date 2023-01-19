@@ -1,2 +1,2 @@
 # HTML-CSS
-Mock survey on consumer behaviour concerning sustainable apparel.
+Mock survey page using an HTML form to collect user input on consumer behaviour concerning sustainable apparel.
