@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>Sustainable apparel survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Sustainable Apparel Survey</h1>
+    </header>
+
+    <main>
+      <p id="description">The objective of this survey is to collect information on consumer behaviour concerning the apparel industry. Your responses will help determine how sustainability can be improved in the apparel industry.</p>
+      <form id="survey-form" action="" method="post">
+        <div id="name-prompt" class="q-a">
+          <label id="name-label" for="name" class="prompt"><span class="req">*</span> Name</label>
+          <input id="name" name="name" class="input" placeholder="Enter your first and last name" type="text" required autofocus>
+        </div>
+        <div id="email-prompt" class="q-a">
+          <label id="email-label" for="email" class="prompt"><span class="req">*</span> Email</label>
+          <input id="email" name="email" class="input" placeholder="Enter your email address" type="email" required>
+        </div>
+        <div id="age-prompt" class="q-a">
+          <label id="number-label" for="number" class="prompt"><span class="req">*</span> Age</label>
+          <input id="number" name="number" class="input" placeholder="Age" type="number" min="1" max="150" required>
+        </div>
+
+        <div id="role-prompt" class="q-a">
+          <label id="role-dropdown" for="role" class="prompt"><span class="req">*</span> Which option best describes your current role?</label>
+          <select id="dropdown" class="input" name="role" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="student">Student</option>
+              <option value="job">Employed full-time</option>
+              <option value="other">Other</option>
+              <option value="no-answer">Prefer not to say</option>
+            </select>
+        </div>
+
+        <div id="frequency-prompt" class="q-a">
+          <label class="prompt"><span class="req">*</span> How frequently do you purchase clothes for yourself?</label>
+          <ul class="input">
+            <li>
+              <input id="f1" type="radio" value="f1" name="frequency" required />
+              <label for="f1">Daily</label>
+            </li>
+            <li>
+              <input id="f2" type="radio" value="f2" name="frequency" />
+              <label for="f2">Weekly</label>
+            </li>
+            <li>
+              <input id="f3" type="radio" value="f3" name="frequency" />
+              <label for="f3">Monthly</label>
+            </li>
+            <li>
+              <input id="f4" type="radio" value="f4" name="frequency" />
+              <label for="f4">Yearly</label>
+            </li>
+            <li>
+              <input id="f5" type="radio" value="f5" name="frequency" />
+              <label for="f5">Other</label>
+            </li>
+          </ul>
+        </div>
+
+        <div id="dispose-prompt" class="q-a">
+          <label class="prompt"><span class="req">*</span> How do you dispose of your old clothes?</label>
+          <ul class="input">
+            <li>
+              <input id="d1" type="checkbox" value="d1" name="dispose"/>
+              <label for="d1">Throw away</label>
+            </li>
+            <li>
+              <input id="d2" type="checkbox" value="d2" name="dispose" />
+              <label for="d2">Donate to charity</label>
+            </li>
+            <li>
+              <input id="d3" type="checkbox" value="d3" name="dispose" />
+              <label for="d3">Re-sell</label>
+            </li>
+            <li>
+              <input id="d4" type="checkbox" value="d4" name="dispose" />
+              <label for="d4">Pass down to friends/family</label>
+            </li>
+            <li>
+              <input id="d5" type="checkbox" value="d5" name="dispose" />
+              <label for="d5">Take to textile recycling facility</label>
+            </li>
+            <li>
+              <input id="d6" type="checkbox" value="d6" name="dispose" />
+              <label for="d6">Keep in storage (do not dispose)</label>
+            </li>
+            <li>
+              <input id="d7" type="checkbox" value="d7" name="dispose" />
+              <label for="d7">Other</label>
+            </li>
+          </ul>
+        </div>
+
+        <div id="locations-prompt" class="q-a">
+          <label class="prompt"><span class="req">*</span> Do you know of any places near you that accept used clothes for recycling?</label>
+          <ul class="input">
+            <li>
+              <input id="m1" type="radio" value="m1" name="material" required />
+              <label for="m1">Yes</label>
+            </li>
+            <li>
+              <input id="m2" type="radio" value="m2" name="material" required />
+              <label for="m2">No</label>
+            </li>
+          </ul>
+        </div>
+
+        <div id="brands-prompt" class="q-a">
+          <label for="user-comment" class="prompt"><span class="req">*</span> Are you aware of any environmentally sustainable apparel brands? List the names here:</label>
+          <textarea id="user-comment" class="input" name="user-comment" rows="4" cols="50" placeholder="Enter the brand names, separated by commas." required></textarea>
+        </div>
+
+        <div id="submit-area">
+          <button id="submit" type="submit">Submit</button>
+          <p id="thanks">Thank you for your input!</p>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      &copy; 2018 Lisa Tian
+    </footer>
+
+  </body>
+
+</html>
