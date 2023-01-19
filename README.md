@@ -1,2 +1,2 @@
 # HTML-CSS
-Responsive web design project in HTML and CSS.
+Mock survey on consumer behaviour concerning sustainable apparel.
