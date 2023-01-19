@@ -1,0 +1,252 @@
+/* Import Google fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Fjalla+One&display=swap');
+
+html{
+  font-family: 'Lato', sans-serif;
+  min-height: 100%; /* allows gradient background to fit full height of page */
+  font-size: 12pt;
+  background: linear-gradient(180deg, #dce0eb, #a7b6d5);
+}
+
+body{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+footer{
+  grid-area: footer;
+  text-align: center;
+  margin-top: 10vh;
+  color: #5676a1;
+}
+
+header{
+  grid-area: header;
+  text-align: center;
+}
+
+h1{
+  grid-area: header;
+  font-family: 'Fjalla One', cursive;
+  font-weight: normal;
+  color: #022b36;
+  font-size: 40pt;
+  margin: 0;
+  padding-top: 50pt;
+  padding-bottom: 15pt;
+  line-height: 90%;
+}
+
+main{
+  color: #022b36;
+  background-color: #f2f7f7;
+  justify-self: center;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "description"
+    "survey-form";
+  justify-items: center;
+  border-radius: 12pt;
+  box-shadow: 0px 30px 30pt rgba(145,167,204,1);
+  width: 60vw;
+}
+
+form{
+  grid-area: survey-form;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas:
+    "survey-block1"
+    "survey-block2"
+    "survey-block3"
+    "survey-block4"
+    "survey-block5"
+    "survey-block6"
+    "survey-block7"
+    "survey-block8"
+    "submit";
+  justify-items: center;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #67507d;
+  line-height: 175%;
+}
+
+button{
+  margin: 10pt auto 10pt auto;
+  border-radius: 10pt;
+  background-color: #6295aa;
+  border-style: none;
+  padding: 5pt 10pt 5pt 10pt;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  display: block;
+}
+
+button:hover{
+  background-color: #a6aa62;
+}
+
+input, select, textarea, button{
+  font-size: 12pt;
+}
+
+select{
+  height: 25pt;
+}
+
+/* --------Survey blocks-------- */
+#name-prompt{
+  grid-area: survey-block1;
+}
+
+#email-prompt{
+  grid-area: survey-block2;
+}
+
+#age-prompt{
+  grid-area: survey-block3;
+}
+
+#role-prompt{
+  grid-area: survey-block4;
+}
+
+#frequency-prompt{
+  grid-area: survey-block5;
+}
+
+#dispose-prompt{
+  grid-area: survey-block6;
+}
+
+#locations-prompt{
+  grid-area: survey-block7;
+}
+
+#brands-prompt{
+  grid-area: survey-block8;
+}
+
+#submit-area{
+  grid-area: submit;
+  justify-self: center;
+  margin-top: 10pt;
+}
+/* --------End of survey blocks-------- */
+
+#description{
+  grid-area: description;
+  margin: 30pt 40pt 8pt 40pt;
+  text-align: center;
+}
+
+#thanks{
+  margin-bottom: 30pt;
+}
+
+#name-prompt .input, #email-prompt .input, #age-prompt .input, #role-prompt .input, textarea{
+  background-color: #cbd5d8;
+  color: #022b36;
+  font-family: 'Raleway', sans-serif;
+}
+
+#name-prompt .input, #email-prompt .input{
+  width: 75%;
+}
+
+#age-prompt .input{
+  width: 20%;
+}
+
+#role-prompt .input{
+  width: 50%;
+}
+
+.q-a{
+  margin: 12pt;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "prompt input";
+  width: 80%;
+}
+
+.prompt{
+  grid-area: prompt;
+  text-align: right;
+  padding-right: 11pt;
+}
+
+.input{
+  grid-area: input;
+  padding: 5pt;
+  font-size: 11pt;
+  border-radius: 5pt;
+  border-style: none;
+}
+
+.req{
+  color: #ca2535;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #869aa0;
+    opacity: 1; /* Firefox */
+}
+
+/* For tablet screen sizes */
+@media only screen and (max-width: 1024px){
+  main{
+    width: 85vw;
+  }
+}
+
+/* For smartphone screen sizes */
+@media only screen and (max-width: 600px){
+  main{
+    width: 95vw;
+  }
+
+  textarea{
+    width: 90%;
+  }
+
+  .q-a{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "prompt"
+      "input";
+    width: 90%;
+  }
+
+  .prompt{
+    grid-area: prompt;
+    text-align: center;
+    margin-bottom: 5pt;
+  }
+
+  .input{
+    grid-area: input;
+    font-size: 11pt;
+    border-radius: 5pt;
+    border-style: none;
+    justify-self: center;
+  }
+}
